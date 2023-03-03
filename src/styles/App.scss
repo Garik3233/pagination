@@ -1,0 +1,159 @@
+// variable
+
+$base-color: #628432;
+$bgCol: rgb(224, 234, 244);
+
+//global
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  background: $bgCol;
+  color: rgb(120, 138, 146);
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: 0.1rem;
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+h1 {
+  font-size: 2.75rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+p {
+  margin-bottom: 1.25rem;
+  color: rgb(78, 100, 76);
+}
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+
+.section-title {
+  text-align: center;
+  margin: 4rem 0 6rem 0;
+}
+
+.cards {
+  width: 90vw;
+  max-width: 1170px;
+  margin: 5rem auto;
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 4rem;
+
+    .card {
+      width: 265px;
+      background: #fff;
+      border-radius: 0.75rem;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      padding: 2rem 3.5rem;
+      text-align: center;
+      transition: all 0.3s ease-in;
+
+      &:hover {
+        box-shadow: 5px 10px 18px rgb(120, 156, 151);
+        transform: scale(1.01);
+      }
+    }
+    .card img {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 0.75rem;
+    }
+
+    .card h4 {
+      margin-bottom: 1.5rem;
+      font-size: 0.85rem;
+      color: rgb(115, 123, 102);
+    }
+  }
+
+  .btn-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .page-btn {
+      width: 2rem;
+      height: 2rem;
+      background: rgb(120, 156, 151);
+      border-color: transparent;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 0.5rem;
+      transition: all 0.3s linear;
+    }
+    .active-btn {
+      background: $bgCol;
+      color: #8c4d4d;
+      box-shadow: 2px 2px 4px 5px #888888;
+    }
+    .prev-btn,
+    .next-btn {
+      background: transparent;
+      border-color: transparent;
+      font-weight: bold;
+      text-transform: capitalize;
+      letter-spacing: 0.1rem;
+      margin: 0.5rem;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s linear;
+
+      &:hover {
+        transform: scale(1.1);
+        color: rgb(120, 156, 151);
+      }
+    }
+  }
+}
